@@ -1,0 +1,58 @@
+# Query: localhost
+# Flags: WordMatch RegExp
+
+26 results - 14 files
+
+Frontend\src\components\Doctor\MedicalRecords.jsx:
+   13:         const response = await fetch(`https://clinic-4-egoj.onrender.com/history`);
+   46:           fetch(`https://clinic-4-egoj.onrender.com/appointments/${id}`).then((res) =>
+   73:         const response = await fetch(`https://clinic-4-egoj.onrender.com/history/delete`, {
+  117:                       src={`https://clinic-4-egoj.onrender.com/${patient.profilePhoto}`}
+
+Frontend\src\components\Doctor\SinglePatient.jsx:
+  20:               fetch(`https://clinic-4-egoj.onrender.com/appointments/${appointmentId}`)
+
+Frontend\src\components\Doctor\TodayAppointments.jsx:
+   14:     fetch("https://clinic-4-egoj.onrender.com/appointments/today") // Update with your correct API URL
+  109:                         src={`https://clinic-4-egoj.onrender.com/${appointment.patientId.profilePhoto}`} // Update the URL accordingly
+
+Frontend\src\components\Doctor\UpdateHistory.jsx:
+  43:         `http://localhost:4001/patient/update/${id}`,
+
+Frontend\src\components\Doctor\Message\ChatBox.jsx:
+  12:       const response = await fetch(`http://localhost:4001/message/${chatId}`);
+  27:         `http://localhost:4001/patient/${patientId}`
+  74:       const response = await fetch("http://localhost:4001/message/send", {
+
+Frontend\src\components\Doctor\Message\MyChats.jsx:
+  24:           `http://localhost:4001/chats/fetchchats/${doctorId}`,
+  56:         `http://localhost:4001/chats/accesschat/${patientId}`,
+
+Frontend\src\components\Doctor\Message\SideDrawer.jsx:
+  22:         `http://localhost:4001/doctor/searchat?search=${encodeURIComponent(
+  52:         `http://localhost:4001/chats/accesschat/${patientId}`,
+
+Frontend\src\components\Patient\AppointmentBooking.jsx:
+  23:         `http://localhost:4001/appointments/available?date=${date}`
+  73:       const response = await fetch("http://localhost:4001/appointments/book", {
+
+Frontend\src\components\Patient\ForgetPassword.jsx:
+  15:         "http://localhost:4001/patient/forgot-password",
+
+Frontend\src\components\Patient\PatientLogin.jsx:
+  27:       const response = await fetch("http://localhost:4001/patient/login", {
+
+Frontend\src\components\Patient\PatientPortal.jsx:
+  27:           `http://localhost:4001/patient/${patientID}`
+  43:               fetch(`http://localhost:4001/appointments/${appointment._id}`)
+
+Frontend\src\components\Patient\ResetPassword.jsx:
+  40:         "http://localhost:4001/patient/reset-password",
+
+Frontend\src\components\Patient\SignUp.jsx:
+  33:       const response = await fetch("http://localhost:4001/patient/signup", {
+
+Frontend\src\components\Patient\Message\Chatbox.jsx:
+  27:           `http://localhost:4001/chats/patientchat/${patientId}`,
+  54:           `http://localhost:4001/message/${chatId}`,
+  92:       const response = await fetch("http://localhost:4001/message/send", {

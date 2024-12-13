@@ -20,7 +20,7 @@ const AppointmentBooking = () => {
   const fetchAvailableSlots = async (date) => {
     try {
       const response = await fetch(
-        `http://localhost:4001/appointments/available?date=${date}`
+        `https://clinic-4-egoj.onrender.com/appointments/available?date=${date}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch available slots");
@@ -70,14 +70,17 @@ const AppointmentBooking = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:4001/appointments/book", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(appointmentData),
-      });
+      const response = await fetch(
+        "https://clinic-4-egoj.onrender.com/appointments/book",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(appointmentData),
+        }
+      );
 
       const data = await response.json();
       if (data.success) {

@@ -17,7 +17,9 @@ function PatientDetails() {
           // Map through the appointment IDs and fetch each one using the ID
           const appointmentResponses = await Promise.all(
             patient.appointments.map((appointmentId) =>
-              fetch(`http://localhost:4001/appointments/${appointmentId}`)
+              fetch(
+                `https://clinic-4-egoj.onrender.com/appointments/${appointmentId}`
+              )
             )
           );
 
