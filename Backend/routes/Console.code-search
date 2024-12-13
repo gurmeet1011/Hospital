@@ -1,0 +1,297 @@
+# Query: Console
+# Flags: WordMatch RegExp
+# ContextLines: 1
+
+70 results - 26 files
+
+Backend\index.js:
+  34    .connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  35:   .then(() => console.log("Connected to MongoDB"))
+  36:   .catch((error) => console.log("MongoDB connection error:", error));
+  37  
+
+  47  app.listen(port, () => {
+  48:   console.log(`Server is running at port ${port}`);
+  49  });
+
+Backend\package-lock.json:
+   345      },
+   346:     "node_modules/console-control-strings": {
+   347        "version": "1.1.0",
+   348:       "resolved": "https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz",
+   349        "integrity": "sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==",
+
+   687          "color-support": "^1.1.2",
+   688:         "console-control-strings": "^1.0.0",
+   689          "has-unicode": "^2.0.1",
+
+  1420          "are-we-there-yet": "^2.0.0",
+  1421:         "console-control-strings": "^1.1.0",
+  1422          "gauge": "^3.0.0",
+
+Backend\controller\appointment.controller.js:
+   46    } catch (error) {
+   47:     console.error(error);
+   48      res.status(500).json({ message: "Server error while fetching slots" });
+
+   99    } catch (error) {
+  100:     console.error("Error booking appointment:", error);
+  101      res.status(500).json({ message: "Failed to book appointment" });
+
+  130    } catch (error) {
+  131:     console.error(error);
+  132      res
+
+  160    } catch (error) {
+  161:     console.error("Error fetching appointment details:", error);
+  162      res
+
+Backend\controller\chat.controller.js:
+   5    const { patientID } = req.params;
+   6:   
+   7  
+
+  48    } catch (error) {
+  49:     console.error("Error accessing chat:", error.message);
+  50      return res
+
+  77    } catch (error) {
+  78:     console.error("Error fetching chats:", error);
+  79      res
+
+  94    } catch (error) {
+  95:     console.error("Error fetching chat:", error);
+  96      res.status(500).json({ message: "Server error" });
+
+Backend\controller\doctor.controller.js:
+   30    } catch (error) {
+   31:     console.error("Error during signup: ", error.message);
+   32      res.status(500).json({ message: "Server error" });
+
+   65    } catch (error) {
+   66:     console.error("Error during login: ", error.message);
+   67      res.status(500).json({ message: "Server error" });
+
+   84    } catch (error) {
+   85:     console.error("Error fetching patients: ", error);
+   86      res
+
+  107    } catch (error) {
+  108:     console.error("Error fetching doctor details:", error);
+  109      // Handle errors (e.g., invalid ID format)
+
+Backend\controller\message.controller.js:
+  46    } catch (error) {
+  47:     console.error("Error sending message:", error);
+  48      return res.status(500).json({ message: "Error sending message", error });
+
+  54    const { chatId } = req.params; // Get the chatId from request parameters
+  55:   
+  56  
+
+  69    } catch (error) {
+  70:     console.error("Error fetching messages:", error);
+  71      return res.status(500).json({ message: "Error fetching messages", error });
+
+Backend\controller\patient.controller.js:
+   36      if (err) {
+   37:       console.error("Error during file upload:", err);
+   38        return res.status(400).json({ message: "Error uploading file" });
+
+   89      } catch (error) {
+   90:       console.error("Error during sign-up:", error.message);
+   91        res.status(500).json({ message: "Internal Server Error" });
+
+  130    } catch (error) {
+  131:     console.log("Error: " + error.message);
+  132      res.status(500).json({ message: "Server error" });
+
+  162    } catch (error) {
+  163:     console.error("Error fetching patient details:", error);
+  164  
+
+  203    } catch (error) {
+  204:     console.log("Error: " + error.message);
+  205      res.status(500).json({ message: "Server error" });
+
+Backend\middleware\doctorAuth.js:
+  22      } catch (error) {
+  23:       console.error("Not authorized, token failed:", error);
+  24        return res.status(401).json({ message: "Not authorized, token failed" });
+
+Backend\routes\medicalHistory.js:
+  13    } catch (error) {
+  14:     console.error("Error fetching medical history: ", error.message);
+  15      res.status(500).json({ message: "Server error" });
+
+  61    } catch (error) {
+  62:     console.error("Error during deletion process:", error.message);
+  63      res.status(500).json({ message: "Server error" });
+
+Backend\routes\patient.route.js:
+   56    } catch (error) {
+   57:     console.error("Error updating patient details:", error.message);
+   58      res.status(500).json({ message: "Server error" });
+
+  105    } catch (error) {
+  106:     console.error(error);
+  107      res
+
+  144    } catch (err) {
+  145:     console.error(err);
+  146      res
+
+Frontend\src\components\Doctor\DoctorLogin.jsx:
+  50      } catch (error) {
+  51:       console.error("Error:", error);
+  52        setError("An error occurred. Please check your network and try again.");
+
+Frontend\src\components\Doctor\MedicalRecords.jsx:
+  31        } catch (err) {
+  32:         console.error("Error fetching patients:", err);
+  33          setLoading(false); // Ensure loading is updated even on failure
+
+  61      } catch (err) {
+  62:       console.error("Error fetching appointments:", err);
+  63        return null;
+
+  88        } catch (error) {
+  89:         console.error("Error:", error);
+  90          alert("An error occurred while deleting the patient.");
+
+Frontend\src\components\Doctor\SinglePatient.jsx:
+   9    const patient = location.state?.patient;
+  10:   
+  11  
+
+  35          } catch (error) {
+  36:           console.error("Error fetching appointments:", error);
+  37          }
+
+  45    const nextAppointment = appointments[appointments.length - 1];
+  46:  
+  47  
+
+Frontend\src\components\Doctor\UpdateHistory.jsx:
+  61        } else {
+  62:         console.error("Failed to update:", result.error);
+  63          alert("Failed to update medical history and prohibitions");
+
+  65      } catch (error) {
+  66:       console.error("Error:", error);
+  67        alert(
+
+Frontend\src\components\Doctor\Message\ChatBox.jsx:
+  16        } else {
+  17:         console.error("Error fetching messages:", data.message);
+  18        }
+  19      } catch (error) {
+  20:       console.error("Error:", error);
+  21      }
+
+  32        } else {
+  33:         console.error("Error fetching patient details:", data.message);
+  34        }
+  35      } catch (error) {
+  36:       console.error("Error:", error);
+  37      }
+
+  86        } else {
+  87:         console.error("Error sending message:", data.message);
+  88        }
+  89      } catch (error) {
+  90:       console.error("Error:", error);
+  91      } finally {
+
+Frontend\src\components\Doctor\Message\ChatPage.jsx:
+  18        } catch (error) {
+  19:         console.error("Error parsing doctor data:", error);
+  20        }
+
+Frontend\src\components\Doctor\Message\MyChats.jsx:
+  40        } catch (error) {
+  41:         console.error("Error fetching chats:", error);
+  42        }
+
+  71      } catch (error) {
+  72:       console.error("Error accessing chat:", error);
+  73      }
+
+Frontend\src\components\Doctor\Message\SideDrawer.jsx:
+  69      } catch (error) {
+  70:       console.error("Error fetching patient chat:", error);
+  71      }
+
+Frontend\src\components\Patient\AppointmentBooking.jsx:
+  30      } catch (error) {
+  31:       console.error("Error fetching available slots:", error);
+  32        setError("Unable to load available slots. Please try again.");
+
+  52      if (!patientDetails || !token) {
+  53:       console.error("Patient details or token not found in localStorage.");
+  54        alert("Patient not logged in. Please log in to book an appointment.");
+
+  91      } catch (error) {
+  92:       console.error("Error booking appointment:", error);
+  93        alert("Failed to book appointment");
+
+Frontend\src\components\Patient\ForgetPassword.jsx:
+  34      } catch (error) {
+  35:       console.error("Error:", error);
+  36        setMessage("An error occurred. Please try again later.");
+
+Frontend\src\components\Patient\PatientLogin.jsx:
+  51      } catch (error) {
+  52:       console.error("Error:", error);
+  53        setError("An error occurred. Please try again later.");
+
+Frontend\src\components\Patient\PatientPortal.jsx:
+  37          const appointments = fetchedData.appointments || [];
+  38:        
+  39  
+
+  63        } catch (error) {
+  64:         console.error("Error fetching patient or appointments:", error);
+  65          setError(error.message); // Set error message
+
+Frontend\src\components\Patient\ResetPassword.jsx:
+  60      } catch (error) {
+  61:       console.error("Error:", error);
+  62        setMessage("An error occurred. Please try again later.");
+
+Frontend\src\components\Patient\SignUp.jsx:
+  43      } catch (err) {
+  44:       console.error("Error during signup:", err);
+  45      }
+
+Frontend\src\components\Patient\Message\Chatbox.jsx:
+   19      if (!patientId) {
+   20:       console.error("Patient ID is not available.");
+   21        return;
+
+   39          } else {
+   40:           console.error("Failed to fetch chat data");
+   41          }
+   42        } catch (error) {
+   43:         console.error("Error fetching chat:", error);
+   44        }
+
+   65          } else {
+   66:           console.error("Error fetching messages");
+   67          }
+   68        } catch (error) {
+   69:         console.error("Error:", error);
+   70        }
+
+  105        } else {
+  106:         console.error("Error sending message:", data.message);
+  107          alert("Error sending message: " + data.message);
+
+  109      } catch (error) {
+  110:       console.error("Error sending message:", error);
+  111        alert("An error occurred while sending your message.");
+
+Frontend\src\components\Patient\Message\ChatPage.jsx:
+  15        } catch (error) {
+  16:         console.error("Error parsing doctor data:", error);
+  17        }

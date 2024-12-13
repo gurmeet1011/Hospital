@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@100;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   
+}
+a:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+ /* Rotate animation for the button pseudo-element */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  position: relative;
+  overflow: hidden; /* Ensures the pseudo-element doesn't extend beyond the button */
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0; /* Initially hidden */
+}
+
+.button:hover::before {
+  opacity: 1;
+  animation: rotate 3s linear infinite;
+}
+
