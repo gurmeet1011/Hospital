@@ -31,7 +31,7 @@ function SignUp({ closeLogin }) {
 
     try {
       const response = await fetch(
-        "https://clinic-4-egoj.onrender.com/patient/signup",
+        "https://clinic-6-hxpa.onrender.com//patient/signup",
         {
           method: "POST",
           body: formDataToSend,

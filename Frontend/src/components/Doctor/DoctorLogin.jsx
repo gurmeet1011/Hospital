@@ -25,7 +25,7 @@ function DoctorLogin() {
 
     try {
       const response = await fetch(
-        "https://clinic-4-egoj.onrender.com/doctor/login",
+        "https://clinic-6-hxpa.onrender.com//doctor/login",
         {
           method: "POST",
           headers: {

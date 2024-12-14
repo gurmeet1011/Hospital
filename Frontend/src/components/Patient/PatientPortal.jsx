@@ -24,7 +24,7 @@ function PatientPortal() {
     const fetchPatient = async () => {
       try {
         const response = await fetch(
-          `https://clinic-4-egoj.onrender.com/patient/${patientID}`
+          `https://clinic-6-hxpa.onrender.com//patient/${patientID}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch patient data.");
@@ -41,7 +41,7 @@ function PatientPortal() {
           const appointmentResponses = await Promise.all(
             appointments.map((appointment) =>
               fetch(
-                `https://clinic-4-egoj.onrender.com/appointments/${appointment._id}`
+                `https://clinic-6-hxpa.onrender.com//appointments/${appointment._id}`
               )
             )
           );

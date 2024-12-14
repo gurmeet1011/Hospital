@@ -11,7 +11,7 @@ function PatientMedicalHistory() {
     const fetchPatients = async () => {
       try {
         const response = await fetch(
-          `https://clinic-4-egoj.onrender.com/history`
+          `https://clinic-6-hxpa.onrender.com//history`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch patients");
@@ -45,7 +45,7 @@ function PatientMedicalHistory() {
     try {
       const appointmentDetails = await Promise.all(
         appointmentIds.map((id) =>
-          fetch(`https://clinic-4-egoj.onrender.com/appointments/${id}`).then(
+          fetch(`https://clinic-6-hxpa.onrender.com//appointments/${id}`).then(
             (res) => res.json()
           )
         )
@@ -73,7 +73,7 @@ function PatientMedicalHistory() {
     if (confirmDelete) {
       try {
         const response = await fetch(
-          `https://clinic-4-egoj.onrender.com/history/delete`,
+          `https://clinic-6-hxpa.onrender.com//history/delete`,
           {
             method: "DELETE",
             headers: {
@@ -119,7 +119,7 @@ function PatientMedicalHistory() {
                 <div className="flex flex-col sm:flex-row items-center sm:space-x-6">
                   <div className="mb-4 sm:mb-0 text-center sm:text-left">
                     <img
-                      src={`https://clinic-4-egoj.onrender.com/${patient.profilePhoto}`}
+                      src={`https://clinic-6-hxpa.onrender.com//${patient.profilePhoto}`}
                       className="rounded-full shadow-lg w-32 h-32 object-cover mx-auto sm:mx-0"
                     />
                     <h2 className="text-2xl font-semibold mt-4">

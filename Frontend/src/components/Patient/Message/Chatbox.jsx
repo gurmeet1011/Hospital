@@ -24,7 +24,7 @@ const PatientChat = () => {
     const fetchChat = async () => {
       try {
         const response = await fetch(
-          `https://clinic-4-egoj.onrender.com/chats/patientchat/${patientId}`,
+          `https://clinic-6-hxpa.onrender.com//chats/patientchat/${patientId}`,
           {
             method: "GET",
             headers: {
@@ -51,7 +51,7 @@ const PatientChat = () => {
     const fetchMessages = async () => {
       try {
         const response = await fetch(
-          `https://clinic-4-egoj.onrender.com/message/${chatId}`,
+          `https://clinic-6-hxpa.onrender.com//message/${chatId}`,
           {
             method: "GET",
             headers: {
@@ -90,7 +90,7 @@ const PatientChat = () => {
 
     try {
       const response = await fetch(
-        "https://clinic-4-egoj.onrender.com/message/send",
+        "https://clinic-6-hxpa.onrender.com//message/send",
         {
           method: "POST",
           headers: {

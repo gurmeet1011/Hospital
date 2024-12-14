@@ -12,7 +12,7 @@ function ForgotPassword() {
 
     try {
       const response = await fetch(
-        "https://clinic-4-egoj.onrender.com/patient/forgot-password",
+        "https://clinic-6-hxpa.onrender.com//patient/forgot-password",
         {
           method: "POST",
           headers: {

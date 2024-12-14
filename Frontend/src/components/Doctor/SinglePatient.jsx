@@ -18,7 +18,7 @@ function PatientDetails() {
           const appointmentResponses = await Promise.all(
             patient.appointments.map((appointmentId) =>
               fetch(
-                `https://clinic-4-egoj.onrender.com/appointments/${appointmentId}`
+                `https://clinic-6-hxpa.onrender.com//appointments/${appointmentId}`
               )
             )
           );

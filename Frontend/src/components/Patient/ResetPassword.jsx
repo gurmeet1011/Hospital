@@ -37,7 +37,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        "https://clinic-4-egoj.onrender.com/patient/reset-password",
+        "https://clinic-6-hxpa.onrender.com//patient/reset-password",
         {
           method: "POST",
           headers: {
