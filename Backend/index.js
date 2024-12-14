@@ -32,7 +32,7 @@ const URI = process.env.MongoDBURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.log("MongoDB connection error:", error));
 
