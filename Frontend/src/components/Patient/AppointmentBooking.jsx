@@ -20,7 +20,7 @@ const AppointmentBooking = () => {
   const fetchAvailableSlots = async (date) => {
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com//appointments/available?date=${date}`
+        `https://clinic-6-hxpa.onrender.com/appointments/available?date=${date}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch available slots");
@@ -71,7 +71,7 @@ const AppointmentBooking = () => {
 
     try {
       const response = await fetch(
-        "https://clinic-6-hxpa.onrender.com//appointments/book",
+        "https://clinic-6-hxpa.onrender.com/appointments/book",
         {
           method: "POST",
           headers: {

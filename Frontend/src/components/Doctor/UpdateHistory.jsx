@@ -40,7 +40,7 @@ function UpdateHistory() {
 
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com//patient/update/${id}`,
+        `https://clinic-6-hxpa.onrender.com/patient/update/${id}`,
         {
           method: "PUT",
           headers: {
