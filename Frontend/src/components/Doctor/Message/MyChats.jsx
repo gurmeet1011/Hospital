@@ -21,7 +21,7 @@ const MyChats = ({ setSelectedPatientChat }) => {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          `http://localhost:4001/chats/fetchchats/${doctorId}`,
+          `https://hospital-drcp.onrender.com/chats/fetchchats/${doctorId}`,
           {
             method: "GET",
             headers: {
@@ -53,7 +53,7 @@ const MyChats = ({ setSelectedPatientChat }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:4001/chats/accesschat/${patientId}`,
+        `https://hospital-drcp.onrender.com/chats/accesschat/${patientId}`,
         {
           method: "POST",
           headers: {

@@ -24,7 +24,7 @@ const PatientChat = () => {
     const fetchChat = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4001/chats/patientchat/${patientId}`,
+          `https://hospital-drcp.onrender.com/chats/patientchat/${patientId}`,
           {
             method: "GET",
             headers: {
@@ -51,7 +51,7 @@ const PatientChat = () => {
     const fetchMessages = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4001/message/${chatId}`,
+          `https://hospital-drcp.onrender.com/message/${chatId}`,
           {
             method: "GET",
             headers: {
@@ -89,14 +89,17 @@ const PatientChat = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4001/message/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(newMessageData),
-      });
+      const response = await fetch(
+        "https://hospital-drcp.onrender.com/message/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(newMessageData),
+        }
+      );
 
       const data = await response.json();
       if (response.ok) {

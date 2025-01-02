@@ -37,7 +37,7 @@ function ResetPassword() {
 
     try {
       const response = await fetch(
-        "http://localhost:4001/patient/reset-password",
+        "https://hospital-drcp.onrender.com/patient/reset-password",
         {
           method: "POST",
           headers: {

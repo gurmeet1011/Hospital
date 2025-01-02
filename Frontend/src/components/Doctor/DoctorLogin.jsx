@@ -24,13 +24,16 @@ function DoctorLogin() {
     };
 
     try {
-      const response = await fetch("http://localhost:4001/doctor/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginData),
-      });
+      const response = await fetch(
+        "https://hospital-drcp.onrender.com/doctor/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginData),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
