@@ -12,7 +12,7 @@ function ForgotPassword() {
 
     try {
       const response = await fetch(
-        "https://clinic-6-hxpa.onrender.com/patient/forgot-password",
+        "http://localhost:4001/patient/forgot-password",
         {
           method: "POST",
           headers: {

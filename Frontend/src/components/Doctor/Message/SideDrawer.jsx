@@ -19,7 +19,7 @@ function SideDrawer({ setSelectedPatientChat }) {
 
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com/doctor/searchat?search=${encodeURIComponent(
+        `http://localhost:4001/doctor/searchat?search=${encodeURIComponent(
           search
         )}`,
         {
@@ -49,7 +49,7 @@ function SideDrawer({ setSelectedPatientChat }) {
 
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com/chats/accesschat/${patientId}`,
+        `http://localhost:4001/chats/accesschat/${patientId}`,
         {
           method: "POST",
           headers: {

@@ -9,9 +9,7 @@ function ChatBox({ selectedPatientChat, doctorId }) {
 
   const fetchMessages = async (chatId) => {
     try {
-      const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com/message/${chatId}`
-      );
+      const response = await fetch(`http://localhost:4001/message/${chatId}`);
       const data = await response.json();
       if (response.ok) {
         setMessages(data);
@@ -26,7 +24,7 @@ function ChatBox({ selectedPatientChat, doctorId }) {
   const fetchPatientDetails = async (patientId) => {
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com/patient/${patientId}`
+        `http://localhost:4001/patient/${patientId}`
       );
       const data = await response.json();
       if (response.ok) {
@@ -73,16 +71,13 @@ function ChatBox({ selectedPatientChat, doctorId }) {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://clinic-6-hxpa.onrender.com/message/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newMessage),
-        }
-      );
+      const response = await fetch("http://localhost:4001/message/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newMessage),
+      });
 
       const data = await response.json();
       if (response.ok) {

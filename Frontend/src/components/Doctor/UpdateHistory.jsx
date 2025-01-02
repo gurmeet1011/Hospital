@@ -40,7 +40,7 @@ function UpdateHistory() {
 
     try {
       const response = await fetch(
-        `https://clinic-6-hxpa.onrender.com/patient/update/${id}`,
+        `http://localhost:4001/patient/update/${id}`,
         {
           method: "PUT",
           headers: {

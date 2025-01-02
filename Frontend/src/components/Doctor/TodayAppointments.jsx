@@ -11,7 +11,7 @@ const TodaysAppointments = () => {
 
   useEffect(() => {
     // Fetch today's appointments from the backend API
-    fetch("https://clinic-6-hxpa.onrender.com/appointments/today") // Update with your correct API URL
+    fetch("http://localhost:4001/appointments/today") // Update with your correct API URL
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch appointments");
@@ -106,7 +106,7 @@ const TodaysAppointments = () => {
                     {appointment.patientId &&
                     appointment.patientId.profilePhoto ? (
                       <img
-                        src={`https://clinic-6-hxpa.onrender.com/${appointment.patientId.profilePhoto}`} // Update the URL accordingly
+                        src={`http://localhost:4001/${appointment.patientId.profilePhoto}`} // Update the URL accordingly
                         alt={appointment.patientId.fullName}
                         className="w-12 h-12 rounded-full object-cover"
                       />

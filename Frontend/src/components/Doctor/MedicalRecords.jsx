@@ -10,9 +10,7 @@ function PatientMedicalHistory() {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch(
-          `https://clinic-6-hxpa.onrender.com/history`
-        );
+        const response = await fetch(`http://localhost:4001/history`);
         if (!response.ok) {
           throw new Error("Failed to fetch patients");
         }
@@ -45,8 +43,8 @@ function PatientMedicalHistory() {
     try {
       const appointmentDetails = await Promise.all(
         appointmentIds.map((id) =>
-          fetch(`https://clinic-6-hxpa.onrender.com/appointments/${id}`).then(
-            (res) => res.json()
+          fetch(`http://localhost:4001/appointments/${id}`).then((res) =>
+            res.json()
           )
         )
       );
@@ -72,16 +70,13 @@ function PatientMedicalHistory() {
     );
     if (confirmDelete) {
       try {
-        const response = await fetch(
-          `https://clinic-6-hxpa.onrender.com/history/delete`,
-          {
-            method: "DELETE",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email }), // Send the email in the body
-          }
-        );
+        const response = await fetch(`http://localhost:4001/history/delete`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }), // Send the email in the body
+        });
 
         if (!response.ok) {
           const errorData = await response.json();
@@ -119,7 +114,7 @@ function PatientMedicalHistory() {
                 <div className="flex flex-col sm:flex-row items-center sm:space-x-6">
                   <div className="mb-4 sm:mb-0 text-center sm:text-left">
                     <img
-                      src={`https://clinic-6-hxpa.onrender.com/${patient.profilePhoto}`}
+                      src={`http://localhost:4001/${patient.profilePhoto}`}
                       className="rounded-full shadow-lg w-32 h-32 object-cover mx-auto sm:mx-0"
                     />
                     <h2 className="text-2xl font-semibold mt-4">
