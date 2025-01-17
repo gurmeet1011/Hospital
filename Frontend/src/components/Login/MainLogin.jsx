@@ -41,7 +41,7 @@ const MainLogin = () => {
                   <p className="font-bold">Demo Login Details:</p>
                   <p>
                     Email:{" "}
-                    <span className="font-mono">geetanshu@gmail.com</span>
+                    <span className="font-mono">gurmeet2024@gmail.com</span>
                   </p>
                   <p>
                     Password: <span className="font-mono">123456</span>
@@ -69,7 +69,7 @@ const MainLogin = () => {
                 <div className="mt-4 text-sm bg-green-200 text-green-700 p-3 rounded-lg">
                   <p className="font-bold">Demo Login Details:</p>
                   <p>
-                    Email: <span className="font-mono">lakshit@gmail.com</span>
+                    Email: <span className="font-mono">guru1011@gmail.com</span>
                   </p>
                   <p>
                     Password: <span className="font-mono">123456</span>
